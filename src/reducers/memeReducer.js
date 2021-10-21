@@ -2,6 +2,6 @@
 // action object as second
 //inside reducer update reducer according to action type
 export default function memeReducer(state = {memes: []}, action) {
-    return state
+    return action.payload
 
 }

@@ -1,22 +1,23 @@
-import React, {Component} from 'react';
+import React from 'react';
+import {connect} from 'react-redux';
+import { fetchMemes } from './actions/fetchMemes';
 
-class App extends Component {
+class App extends React.Component {
 
-  // componentDidMount() {
-  //   fetch('http://localhost:3000/api/v1/memes', {
-  //     method: 'GET'
-  // })
-  // .then(response => response.json())
-  // .then(data => console.log(data))
-  // }
+  componentDidMount() {
+    this.props.fetchMemes({type: 'FETCH_MEMES', payload: {name: 'Checking'}}) 
+  }
+
 
 
   render() {
-  return (
-    <div className="App">
-    </div>
-  );
+    return (
+      <div className="App">
+        App
+      </div>
+    );
   }
 }
 
-export default App;
+export default connect(null, {fetchMemes})(App);
+
