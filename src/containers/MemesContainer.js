@@ -8,16 +8,13 @@ class MemesContainer extends Component {
 
     componentDidMount() {
        this.props.fetchMemes()
-        // fetch('http://localhost:3000/api/v1/memes')
-        // .then(resp => resp.json)
-        // .then(data => console.log(data))
     }
 
     render() {
         return(
             <div>
                 <MemeForm />
-                <Memes />
+                <Memes memes={this.props.memes}/>
             </div>
         )
     }
