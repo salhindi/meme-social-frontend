@@ -5,6 +5,7 @@ import { fetchMemes } from "../actions/fetchMemes";
 import MemeForm from "../components/MemeForm";
 
 class MemesContainer extends Component {
+    
 
     componentDidMount() {
        this.props.fetchMemes()
@@ -24,7 +25,6 @@ const mapStateToProps = state => {
     return {
         memes: state.memes
     }
-
 }
 
 export default connect(mapStateToProps, {fetchMemes})(MemesContainer)
