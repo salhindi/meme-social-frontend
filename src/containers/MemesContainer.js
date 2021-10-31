@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import Memes from "../components/Memes";
 import { fetchMemes } from "../actions/fetchMemes";
 import MemeForm from "../components/MemeForm";
+import MemeShow from "../components/MemeShow";
+import {Route} from 'react-router-dom';
 
 class MemesContainer extends Component {
     
@@ -14,8 +16,10 @@ class MemesContainer extends Component {
     render() {
         return(
             <div>
-                <MemeForm />
-                <Memes memes={this.props.memes}/>
+                <Route path='/memes/new' component={MemeForm} /><br />
+                <Route path='/memes/:id' render={(routerProps) => <MemeShow {...routerProps} memes={this.props.memes}/>} />
+                <Route exact path='/memes' render={(routerProps) => <Memes {...routerProps}  memes={this.props.memes}/>} />
+
             </div>
         )
     }
