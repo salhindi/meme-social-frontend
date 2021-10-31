@@ -1,12 +1,13 @@
 import React from "react";
 import MemeShow from './MemeShow'
-import {Route} from 'react-router-dom'
+import {Route, Link } from 'react-router-dom'
 
 const Memes = (props) => {
     return (
         <div>
             hi
-           {props.memes.map(meme => <div key={meme.id}><MemeShow meme={meme}/></div>)}
+           {props.memes.map(meme => <div key={meme.id}><Link to={`/memes/${meme.id}`}>{meme.title}</Link>
+           </div>)}
            {/* <Route path='/memes/:id' render={() => <MemeShow /> } /> */}
         </div>
     )
