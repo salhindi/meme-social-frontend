@@ -8,6 +8,13 @@ export default function memeReducer(state = {memes: []}, action) {
             return {memes: action.payload}
         case 'CREATE_MEME':
             return {...state, memes: [...state.memes, action.payload]}
+        case 'ADD_TAG':
+            return{...state, memes: state.memes.map(m => {
+                if (m.id === action.payload.id) {
+                    return action.payload
+                } else
+                return m
+            })}
             default:
                 return state
     }

@@ -1,6 +1,6 @@
 import React from "react";
-import MemeShow from './MemeShow'
-import {Route, Link } from 'react-router-dom'
+// import MemeShow from './MemeShow'
+import {Link } from 'react-router-dom'
 
 const Memes = (props) => {
     return (
