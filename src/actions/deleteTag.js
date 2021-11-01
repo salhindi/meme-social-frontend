@@ -1,6 +1,6 @@
-export const deleteTag = (tagId) => {
+export const deleteTag = (memeId, tagId) => {
     return (dispatch) => {
-        return fetch(`http://localhost:3000/api/v1/memes/${memeId}/tags/${tagsId}`, {
+        return fetch(`http://localhost:3000/api/v1/memes/${memeId}/tags/${tagId}`, {
             method: 'DELETE'
         })
         .then(resp => resp.json())

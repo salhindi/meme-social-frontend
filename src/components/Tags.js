@@ -1,15 +1,18 @@
 import React from "react";
+import { connect } from "react-redux";
+import { deleteTag } from "../actions/deleteTag";
 
 const Tags = (props => {
-    const handleDelete = () => {
-
+    const handleDelete = (tag) => {
+        props.deleteTag(tag.id, tag.meme_id)
     }
     return (
         <div>
             {props.tags && props.tags.map(tag => 
-                <li key={tag.id}>{tag.name}</li> <button onClick={handleDelete}/>)}
+                <li key={tag.id}>{tag.name} <button onClick={() => handleDelete(tag)}/></li>
+                )}
 
         </div>        )
 })
 
-export default Tags
+export default connect(null, {deleteTag})(Tags)
