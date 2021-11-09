@@ -7,6 +7,7 @@ export const addTag = (tag, memeId) => {
             },
             body: JSON.stringify(tag)
         })
+        .catch(err=>console.log(err))
         .then(resp => resp.json())
         .then(meme => dispatch({type: 'ADD_TAG', payload: meme}))
     } 

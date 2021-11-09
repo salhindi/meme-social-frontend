@@ -6,7 +6,6 @@ class TagsContainer extends React.Component {
     render() {
         return (
             <div>
-
                 <TagInput meme={this.props.meme}/>
                 <Tags tags={this.props.meme && this.props.meme.tags} />
             </div>

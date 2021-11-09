@@ -9,7 +9,7 @@ const Tags = (props => {
     return (
         <div>
             {props.tags && props.tags.map(tag => 
-                <li key={tag.id}>{tag.name} <button onClick={() => handleDelete(tag)}/></li>
+                <li key={tag.id}>{tag.name} <button onClick={() => handleDelete(tag)}> x </button></li>
                 )}
 
         </div>        )

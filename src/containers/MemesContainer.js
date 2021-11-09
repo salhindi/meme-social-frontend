@@ -5,7 +5,6 @@ import { fetchMemes } from "../actions/fetchMemes";
 import MemeForm from "../components/MemeForm";
 import MemeShow from "../components/MemeShow";
 import {Route, Switch} from 'react-router-dom';
-import TagsContainer from "./TagsContainer";
 
 class MemesContainer extends Component {
     
@@ -23,7 +22,6 @@ class MemesContainer extends Component {
                 <Route path='/memes/:id' render={(routerProps) => <MemeShow {...routerProps} memes={this.props.memes}/>} />
                 <Route exact path='/memes' render={(routerProps) => <Memes {...routerProps}  memes={this.props.memes}/>} />
                 </Switch>
-                {/* <TagsContainer /> */}
             </div>
         )
     }
