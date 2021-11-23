@@ -1,14 +1,12 @@
 import React from "react"
 import { Redirect } from "react-router-dom"
 
-
 import TagsContainer from "../containers/TagsContainer"
-
 
 const MemeShow = (props) => {
     
 
-    console.log(props)
+    console.log(props.memes.map(m => m.featured_image))
     
     let meme = props.memes.filter(m => m.id == props.match.params.id)[0]
     

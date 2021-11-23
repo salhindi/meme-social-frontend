@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(192, 36, 36);
+    
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center; 
+}
+
+.memes {
+    display: inline-block;
+    inline-size: 275px;
+    background-position: center;
+    background-color: rgb(184, 250, 200);
+    block-size: 20%; 
+    border-radius: 10% / 50%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.nav {
+    display: inline-block;
+    inline-size: 25%; 
+    background-color: rgb(184, 250, 200);
+    border-radius: 10% / 50%;
+
+    color: white;
+    padding: 40x;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+
+
+}
+
+.link {
+    color:yellowgreen;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.image {
+    height: 150px
+}

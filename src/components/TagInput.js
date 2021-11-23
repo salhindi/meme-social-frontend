@@ -17,9 +17,6 @@ class TagInput extends React.Component {
         event.preventDefault()
         this.props.addTag(this.state, this.props.meme.id)
     }
- 
-
-    
     render() {
         return (
             <div>

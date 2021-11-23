@@ -1,14 +1,26 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import MemeGifLogo from './MemeGifLogo';
+
 
 const NavBar = () => {
  return (
-        <nav>
-            <ul>
-                <li><Link to='/memes'>See Memes</Link></li>
-                <li><Link to='/memes/new'>New Meme</Link></li>
-            </ul>
+ <div>
+        <nav className="nav"> 
+        <br /> 
+                <Link to='/memes' className='link'>See Memes</Link>
+            <MemeGifLogo />
+            
+                <Link to='/memes/new' className='link'>New Meme</Link>
+
+                
+
+            <br />
+            <br />
+         
         </nav>
+        <br />
+         </div>
     );
 };
 

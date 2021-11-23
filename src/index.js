@@ -10,7 +10,7 @@ import App from './App';
 
 const composeEnhancers = window['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'] || compose;
 
-let store = createStore(memeReducer, 
+const store = createStore(memeReducer, 
   composeEnhancers(applyMiddleware(thunk)
   )
 );

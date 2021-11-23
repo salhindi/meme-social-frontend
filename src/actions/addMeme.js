@@ -1,4 +1,3 @@
-
 export function addMeme(formData) {
     return (dispatch) => {
         fetch('http://localhost:3000/api/v1/memes', {
@@ -13,6 +12,4 @@ export function addMeme(formData) {
         .then(response => response.json())
         .then(memeData => dispatch({type:"CREATE_MEME", payload: memeData}))    
     }
-    
-    
 }

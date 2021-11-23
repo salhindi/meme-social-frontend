@@ -7,5 +7,4 @@ export function fetchMemes() {
             payload: memeData
         }))
     }
-    
 }

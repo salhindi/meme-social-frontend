@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import {connect} from 'react-redux'
 import {addMeme} from '../actions/addMeme'
-// import { DirectUpload } from 'activestorage';
-// import axios from 'axios';
+
 
 
 class MemeForm extends Component {
@@ -24,17 +23,12 @@ class MemeForm extends Component {
 
 
     onSubmitMeme = event => {
-        event.preventDefault()
-        const formData = new FormData();
-    formData.append('title', this.state.title);
-    formData.append('top_text', this.state.top_text);
-    formData.append('bottom_text', this.state.bottom_text);
-    formData.append('featured_image', this.state.featured_image);    
+        event.preventDefault()    
         this.props.addMeme(this.state)
         this.setState({title: '', 
         top_text: '',
         bottom_text: '',
-        featured_image: '',
+        featured_image: null,
     }
        )
        this.props.history.push('/memes');
